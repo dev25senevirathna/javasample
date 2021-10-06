@@ -16,27 +16,29 @@ public class Gim {
      */
     public static void main(String[] args) {
       sph my= new sph();
-      my.details(7,3.5);
-     my.peri();
+      my.details(4,2.4,3.1);
+     my.vol();
       
     }
     
 }
 class sph{
    double length;
-    double radius;
-     double peri;
+    double width;
+     double height;
+    double vol;
     
-   public void details(double l, double r){
+   public void details(double l, double w,double h){
         length =l;
-        radius =r;
+        width =w;
+       height =h;
         
-        peri =l + 2*3.14*r;
+     vol =l*w*h;
      
         
     }
-   public void peri(){
-       System.out.println(peri);
+   public void vol(){
+       System.out.println(vol);
    }
     
 }
