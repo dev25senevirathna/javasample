@@ -16,29 +16,29 @@ public class Gim {
      */
     public static void main(String[] args) {
       sph my= new sph();
-      my.details(4,2.4,3.1);
-     my.vol();
+      my.details(4,2.5,3);
+     my.lspeed();
       
     }
     
 }
 class sph{
-   double length;
-    double width;
-     double height;
-    double vol;
+   double fspeed;
+    double accel;
+     double time;
+    double lspeed;
     
-   public void details(double l, double w,double h){
-        length =l;
-        width =w;
-       height =h;
+   public void details(double u, double a,double t){
+        fspeed =u;
+        accel =a;
+       time =t;
         
-     vol =l*w*h;
+     lspeed = u + 0.5*a*t ;
      
         
     }
-   public void vol(){
-       System.out.println(vol);
+   public void lspeed(){
+       System.out.println(lspeed);
    }
     
 }
