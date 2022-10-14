@@ -16,29 +16,30 @@ public class Gim {
      */
     public static void main(String[] args) {
       sph my= new sph();
-      my.details(4,2.5,3);
-     my.lspeed();
+      my.details(4,2.5);
+     my.force();
       
     }
     
 }
 class sph{
-   double fspeed;
+  
+    double force;
+    double mass;
     double accel;
-     double time;
-    double lspeed;
     
-   public void details(double u, double a,double t){
-        fspeed =u;
-        accel =a;
-       time =t;
+    
+   public void details(double f, double m,double a){
+        force =f;
+        mass =m;
+       accel =a;
         
-     lspeed = u + 0.5*a*t ;
+     force = m*a;
      
         
     }
-   public void lspeed(){
-       System.out.println(lspeed);
+   public void force(){
+       System.out.println(force);
    }
     
 }
